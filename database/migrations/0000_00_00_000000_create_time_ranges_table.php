@@ -22,6 +22,8 @@ class CreateTimeRangesTable extends Migration
             $table->time('end');
             $table->boolean('aggregate');
             $table->integer('count');
+            $table->string('target_type');
+            $table->integer('target_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
         });

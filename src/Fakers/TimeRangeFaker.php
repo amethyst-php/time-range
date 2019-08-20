@@ -24,6 +24,8 @@ class TimeRangeFaker extends Faker
         $bag->set('end', '10:00:00');
         $bag->set('aggregate', 1);
         $bag->set('count', 2);
+        $bag->set('target_type', 'foo');
+        $bag->set('target', FooFaker::make()->parameters()->toArray());
 
         return $bag;
     }

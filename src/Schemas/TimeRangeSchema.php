@@ -36,6 +36,13 @@ class TimeRangeSchema extends Schema
                 ->setDefault(function($entity) {
                     return 1;
                 }),
+            Attributes\EnumAttribute::make('target_type', app('amethyst')->getMorphListable('time-range', 'target'))
+                ->setRequired(true),
+            Attributes\MorphToAttribute::make('target_id')
+                ->setRelationKey('target_type')
+                ->setRelationName('target')
+                ->setRelations(app('amethyst')->getMorphRelationable('time-range', 'target'))
+                ->setRequired(true),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),

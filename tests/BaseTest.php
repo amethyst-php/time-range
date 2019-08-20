@@ -11,6 +11,8 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
     {
         parent::setUp();
 
+        app('amethyst')->pushMorphRelation('time-range', 'target', 'foo');
+
         $this->artisan('migrate:fresh');
     }
 
@@ -18,6 +20,7 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
     {
         return [
             \Amethyst\Providers\TimeRangeServiceProvider::class,
+            \Amethyst\Providers\FooServiceProvider::class,
         ];
     }
 }
