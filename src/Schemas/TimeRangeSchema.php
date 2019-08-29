@@ -29,11 +29,11 @@ class TimeRangeSchema extends Schema
             Attributes\TextAttribute::make('end')
                 ->setRequired(true),
             Attributes\BooleanAttribute::make('aggregate')
-                ->setDefault(function($entity) {
+                ->setDefault(function ($entity) {
                     return 1;
                 }),
             Attributes\NumberAttribute::make('count')
-                ->setDefault(function($entity) {
+                ->setDefault(function ($entity) {
                     return 1;
                 }),
             Attributes\EnumAttribute::make('target_type', app('amethyst')->getMorphListable('time-range', 'target'))
