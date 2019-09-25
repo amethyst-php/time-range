@@ -31,4 +31,9 @@ class TimeRange extends Model implements EntityContract
     {
         return $this->morphTo();
     }
+
+    public function diffInSeconds()
+    {
+        return strtotime($this->end) - strtotime($this->start);
+    }
 }

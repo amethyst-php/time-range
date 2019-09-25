@@ -17,13 +17,25 @@ class TimeRangeSchema extends Schema
         return [
             Attributes\IdAttribute::make(),
             Attributes\TextAttribute::make('year')
-                ->setRequired(true),
+                ->setRequired(true)
+                ->setDefault(function ($entity) {
+                    return '*';
+                }),
             Attributes\TextAttribute::make('month')
-                ->setRequired(true),
+                ->setRequired(true)
+                ->setDefault(function ($entity) {
+                    return '*';
+                }),
             Attributes\TextAttribute::make('day')
-                ->setRequired(true),
+                ->setRequired(true)
+                ->setDefault(function ($entity) {
+                    return '*';
+                }),
             Attributes\TextAttribute::make('weekday')
-                ->setRequired(true),
+                ->setRequired(true)
+                ->setDefault(function ($entity) {
+                    return '*';
+                }),
             Attributes\TextAttribute::make('start')
                 ->setRequired(true),
             Attributes\TextAttribute::make('end')
