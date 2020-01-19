@@ -4,13 +4,13 @@
     "keywords": ["laravel", "amethyst", "amethyst-time-range", "time-range"],
     "license": "MIT",
     "require": {
-        "php": ">=7.1",
-        "amethyst/common": "0.1.*"
+        "php": ">=7.2",
+        "amethyst/core": "0.2.*"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
         "orchestra/testbench": "3.6.*",
-        "amethyst/foo": "0.1.*"
+        "amethyst/foo": "0.2.*"
     },
     "autoload": {
         "psr-4" : {
