@@ -48,7 +48,7 @@ class TimeRangeSchema extends Schema
                 ->setDefault(function ($entity) {
                     return 1;
                 }),
-            Attributes\EnumAttribute::make('target_type', app('amethyst')->getDataNames())
+            \Amethyst\Core\Attributes\DataNameAttribute::make('target_type')
                 ->setRequired(true),
             Attributes\MorphToAttribute::make('target_id')
                 ->setRelationKey('target_type')
